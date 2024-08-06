@@ -1,0 +1,684 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Kishan Kumar</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"/>
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+  <style>
+      body{
+          margin-top:20px;
+          background:#FAFAFA;
+      }
+      .order-card {
+          color: #fff;
+      }
+
+      .bg-c-blue {
+          background: linear-gradient(45deg,#4099ff,#73b4ff);
+      }
+
+      .bg-c-green {
+          background: linear-gradient(45deg,#2ed8b6,#59e0c5);
+      }
+
+      .bg-c-yellow {
+          background: linear-gradient(45deg,#FFB64D,#ffcb80);
+      }
+
+      .bg-c-pink {
+          background: linear-gradient(45deg,#FF5370,#ff869a);
+      }
+
+
+      .card {
+          border-radius: 5px;
+          -webkit-box-shadow: 0 1px 2.94px 0.06px rgba(4,26,55,0.16);
+          box-shadow: 0 1px 2.94px 0.06px rgba(4,26,55,0.16);
+          border: none;
+          margin-bottom: 30px;
+          -webkit-transition: all 0.3s ease-in-out;
+          transition: all 0.3s ease-in-out;
+      }
+
+      .card .card-block {
+          padding: 25px;
+      }
+
+      .order-card i {
+          font-size: 26px;
+      }
+
+      .f-left {
+          float: left;
+      }
+
+      .f-right {
+          float: right;
+      }
+</style>
+  </head>
+  <body>
+{% csrf_token %}
+{% comment %} navigation bar {% endcomment %}
+
+
+              <section style="background-color: #eee;"class="py-2">
+                  <nav class="navbar navbar-expand-lg bg-secondary container rounded fixed-top "  data-bs-theme="dark" >
+                      <div class="container-fluid" >
+                        <a class="navbar-brand" href="#">Home</a>
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                          <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarNav">
+                          <ul class="navbar-nav">
+                            <li class="nav-item">
+                              <a class="nav-link active" aria-current="page" href="#about">About</a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link" href="#skill">Skill</a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link" href="#education">Education</a>
+                            </li>
+                             <li class="nav-item">
+                              <a class="nav-link" href="#experience">Experience</a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link" href="#project">Projects</a>
+                            </li>
+                              <li class="nav-item">
+                              <a class="nav-link" href="#fact">Facts</a>
+                            </li>
+                              <li class="nav-item">
+                              <a class="nav-link" href="#contact">Contact</a>
+                            </li>
+                            {% comment %} <li class="nav-item">
+                              <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+                            </li> {% endcomment %}
+                          </ul>
+                        </div>
+                      </div>
+                      
+
+                    </nav>
+
+              </section>
+
+
+
+{% comment %} Crousal  {% endcomment %}
+
+              <section id="" style="background-color: #eee;" class="pt-5">
+   
+                  <div id="carouselExampleCaptions" class="carousel slide container rounded "class="carousel slide" data-bs-ride="carousel">
+                      <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                      </div>
+                      <div class="carousel-inner ">
+                        <div class="carousel-item active">
+                          <img src="https://source.unsplash.com/1600x300/?nature,water" class="d-block w-100" alt="...">
+                          {% comment %} <div class="carousel-caption d-none d-md-block">
+                            <h5>First slide label</h5>
+                            <p>Some representative placeholder content for the first slide.</p>
+                          </div> {% endcomment %}
+                        </div>
+                        <div class="carousel-item">
+                          <img src="https://source.unsplash.com/1600x300/?developer,coding" class="d-block w-100" alt="...">
+                          {% comment %} <div class="carousel-caption d-none d-md-block">
+                            <h5>Second slide label</h5>
+                            <p>Some representative placeholder content for the second slide.</p>
+                          </div> {% endcomment %}
+                        </div>
+                        <div class="carousel-item">
+                          <img src="https://source.unsplash.com/1600x300/?coder,developer" class="d-block w-100" alt="...">
+                          {% comment %} <div class="carousel-caption d-none d-md-block">
+                            <h5>Third slide label</h5>
+                            <p>Some representative placeholder content for the third slide.</p>
+                          </div> {% endcomment %}
+                        </div>
+                      </div>
+                      <div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                      </div>
+{% if messages %}
+<div class="alert alert-success alert-dismissible fade show my-0 pb-0" role="alert">
+                        
+                          <ul class="messages">
+                              {% for message in messages %}
+                              <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>Message Successfully Sent</li>
+                              {% endfor %}
+                          </ul>
+                        
+  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+{% endif %}
+                  </div>
+              </section>
+
+
+
+
+
+{% comment %} About  {% endcomment %}
+
+            <section id="about" style="background-color: #eee;">
+                  <div class="container py-3">
+                    <div class="row text-center">
+
+                        <!-- Team item -->
+                        <div class="col-xl-4 col-sm-6 mb-5">
+                            <div class="bg-white rounded shadow-sm py-5 px-4"><img src="/media/{{profile.0.image}}"
+                              width="100" class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm">
+                                <h5 class="mb-0">{{profile.0.name}}</h5><span class="small text-uppercase text-muted">{{profile.0.bio}}</span>
+                                <ul class="social mb-0 list-inline mt-3">
+                                    <li class="list-inline-item"><a href="#" class="social-link"><i class="fa fa-facebook-f"></i></a></li>
+                                    <li class="list-inline-item"><a href="#" class="social-link"><i class="fa fa-twitter"></i></a></li>
+                                    <li class="list-inline-item"><a href="#" class="social-link"><i class="fa fa-instagram"></i></a></li>
+                                    <li class="list-inline-item"><a href="https://www.linkedin.com/in/shokalkishan/" class="social-link"><i class="fa fa-linkedin"></i></a></li>
+                                </ul>
+                            </div>
+                        </div><!-- End -->
+                      <div class="col-lg-8">
+                        <div class="card mb-4">
+                          <div class="card-body">
+                            <div class="row">
+                              <div class="col-sm-3">
+                                <p class="mb-0">Full Name</p>
+                              </div>
+                              <div class="col-sm-9">
+                                <p class="text-muted mb-0">{{profile.0.name}}</p>
+                              </div>
+                            </div>
+                            <hr>
+                            <div class="row">
+                              <div class="col-sm-3">
+                                <p class="mb-0">Email</p>
+                              </div>
+                              <div class="col-sm-9">
+                                <p class="text-muted mb-0">{{profile.0.email}}</p>
+                              </div>
+                            </div>
+                            <hr>
+                            <div class="row">
+                              <div class="col-sm-3">
+                                <p class="mb-0">Phone</p>
+                              </div>
+                              <div class="col-sm-9">
+                                <p class="text-muted mb-0">{{profile.0.phone}}</p>
+                              </div>
+                            </div>
+                            <hr>
+                            <div class="row">
+                              <div class="col-sm-3">
+                                <p class="mb-0">DOB</p>
+                              </div>
+                              <div class="col-sm-9">
+                                <p class="text-muted mb-0">{{profile.0.dob}}</p>
+                              </div>
+                            </div>
+                            <hr>
+                            <div class="row">
+                              <div class="col-sm-3">
+                                <p class="mb-0">Address</p>
+                              </div>
+                              <div class="col-sm-9">
+                                <p class="text-muted mb-0">{{profile.0.address}}</p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+ 
+                      </div>
+                    </div>
+                    <div class="col-lg-12">
+                      <div class="card mb-4">
+                        <div class="card-body">
+                          <div class="row">
+                            <div class="col-sm-3">
+                              <p class="mb-0"><strong>Summary</strong></p>
+                            </div>
+                          </div>
+                          <hr>
+                          <div class="row">
+                            <div class="col-sm-12">
+                              <p class="mb-0">{{profile.0.summary}}</p>
+                            </div>
+                          </div>
+                          
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+            </section>
+              
+              
+
+ {% comment %} Skills  {% endcomment %}
+              
+              
+              
+              <section id="skill" style="background-color: #eee;">
+                  <div class="container pt-0 ">
+                    
+                      <nav aria-label="breadcrumb" class="bg-light rounded-3 p-3 mb-4">
+                          <span class="px-2">
+                              <strong>Skills</strong>
+                            </span>
+
+                        </nav>
+                  </div>
+                  <div class="container pb-0">
+              
+                
+                    <div class="row">
+
+                      <div class="col-lg-12">
+
+                      <div class="row">
+                          <div class="col-md-6">
+                            <div class="card mb-4 mb-md-0">
+                              <div class="card-body">
+                                <p class="mb-4"><span class="text-primary font-italic me-1"></span> <strong>Skills</strong>
+                                </p>
+                                {%for sk in skill%}
+                                  <p class="mb-1 py-1 " style="font-size: .77rem;">{{sk.name}}</p>
+                                  <div class="progress rounded " style="height: 5px;">
+                                    <div class="progress-bar" role="progressbar" style="width: {{sk.level}}%" aria-valuenow="sk.level"
+                                      aria-valuemin="0" aria-valuemax="100"></div>
+                                  </div>
+                                  
+                                {%endfor%}
+
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-md-6">
+                            <div class="card mb-4 mb-md-0">
+                              <div class="card-body">
+                                <p class="mb-4"><span class="text-primary font-italic me-1"></span> <strong>Soft Skill</strong>
+                                </p>
+                                {%for sk in soft_skill%}
+                                  <p class="mb-1 py-1" style="font-size: .77rem;">{{sk.name}}</p>
+                                  <div class="progress rounded" style="height: 5px;">
+                                    <div class="progress-bar" role="progressbar" style="width: {{sk.level}}%" aria-valuenow="{{sk.level}}"
+                                      aria-valuemin="0" aria-valuemax="100"></div>
+                                  </div>
+                                {%endfor%}
+                                
+
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+              </section>
+
+
+
+
+
+
+
+              
+              
+              
+
+
+{% comment %} Education  {% endcomment %}
+      
+              
+              
+              
+
+              <section id="education" style="background-color: #eee;" class="pt-5">
+                  
+                  <div class="container pt-0 ">
+                      <nav aria-label="breadcrumb" class="bg-light rounded-3 p-3 mb-4">
+                          <span class="px-2">
+                              <strong>Education</strong>
+                          </span>
+
+                      </nav>
+                  </div>
+                  <div class="container py-3 mb-12"> 
+                      <nav aria-label="breadcrumb" class="bg-light rounded-3 p-3 mb-12">
+                          <div class="row row-cols-1 row-cols-md-3 g-4">
+                            {%for ed in education%}
+                            <div class="col">
+                              <div class="card">
+                                <img src="/media/{{ed.image}}" class="card-img-top" alt="..." width="300" height="200">
+                                <div class="card-body">
+                                  <h5 class="card-title">{{ed.degree}}</h5>
+                                  <p class="card-text"> <i> {{ed.school}} </i></p>
+                                  <p class="card-text"> {{ed.marks}} </p>
+                                </div>
+                              </div>
+                            </div>
+                            {%endfor%}
+
+                          </div>
+
+                      </nav>
+                  </div>
+              </section>
+                  
+
+              
+              
+              
+
+
+
+
+
+
+
+{% comment %} Experience {% endcomment %}
+
+
+              <section id="experience" style="background-color: #eee;">
+                  
+                  <div class="container pt-5 ">
+                    
+                      <nav aria-label="breadcrumb" class="bg-light rounded-3 p-3 mb-4">
+                          <span class="px-2">
+                              <strong>Experience</strong>
+                          </span>
+
+                        </nav>
+                  </div>
+                  <div class="container py-0 mb-12">
+                    
+                      <nav aria-label="breadcrumb" class="bg-light rounded-3 p-3 mb-12">
+
+
+
+                          <div class="row row-cols-1 row-cols-md-2 g-4">
+                            {%for exp in experience%}
+                            <div class="col">
+                              <div class="card">
+                                <img src="/media/{{exp.image}}" class="card-img-top" alt="...",width="300" height="300">
+                                <div class="card-body">
+                                  <h5 class="card-title">{{exp.title}}</h5>
+                                  {%if exp.company%}
+                                      <p> <i>{{exp.company}}</i></p>
+                                  {%endif%}
+                                  
+                                  <div style="display:flex; flex-direction: row; justify-content: space-between; align-items: center;">
+                                    <a href="experience/{{exp.title}}"> <button  type="button" class="btn btn-info">Link</button> </a>
+                                    <a href="experience/{{exp.title}}"> <button  type="button" class="btn btn-info">Info</button> </a>
+                                  </div>
+
+                                </div>
+                              </div>
+                            </div>
+                            {%endfor%}
+                          </div>
+
+
+                      </nav>
+                  </div>
+              </section>
+
+
+
+
+
+
+
+{% comment %} Projects  {% endcomment %}
+
+              <section id="project" style="background-color: #eee;">
+                  
+                  <div class="container pt-5 ">
+                    
+                      <nav aria-label="breadcrumb" class="bg-light rounded-3 p-3 mb-4">
+                          <span class="px-2">
+                              <strong>Projects</strong>
+                          </span>
+                          <span class="text-center">
+                              <div class="form-check form-check-inline">
+                                  <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+                                  <label class="form-check-label" for="inlineCheckbox1">All</label>
+                              </div>
+                              <div class="form-check form-check-inline">
+                                  <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
+                                  <label class="form-check-label" for="inlineCheckbox2">Web</label>
+                              </div>
+                              <div class="form-check form-check-inline">
+                                  <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option1">
+                                  <label class="form-check-label" for="inlineCheckbox3">ML</label>
+                              </div>
+                              <div class="form-check form-check-inline">
+                                  <input class="form-check-input" type="checkbox" id="inlineCheckbox4" value="option2">
+                                  <label class="form-check-label" for="inlineCheckbox4">Others</label>
+                              </div>
+                          </span>
+                        </nav>
+                  </div>
+                  <div class="container py-0 mb-12">
+                    
+                      <nav aria-label="breadcrumb" class="bg-light rounded-3 p-3 mb-12">
+                        <div class="row row-cols-1 row-cols-md-4 g-4">
+                      {%for pr in projects%}
+
+
+                          
+                            <div class="col">
+                              <div class="card">
+                                <img src="/media/{{pr.image}}" class="card-img-top" alt="..."width="300" height="200">
+                                <div class="card-body">
+                                  <h5 class="card-title">{{pr.name}}</h5>
+                                  
+                                  <p class="card-text">{{pr.bio}}</p>
+                                  <div style="display:flex; flex-direction: row; justify-content: space-between; align-items: center;">
+                                    <a href="{{ pr.link }}" target="blank"><button type="button" class="btn btn-info">Link</button></a>
+                                    <a  href="project_details/{{pr.name}}"><button type="button" class="btn btn-info">Info</button></a>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+
+                        
+                    
+                       {%endfor%}
+                        </div>
+
+                      </nav>
+                  </div>
+                  
+              </section>
+
+{% comment %} Coding Profile  {% endcomment %}
+
+              <section id="fact" style="background-color: #eee;" class="pt-5">
+                  
+                  <div class="container pt-0 ">
+                      <nav aria-label="breadcrumb" class="bg-light rounded-3 p-3 mb-4">
+                          <span class="px-2">
+                              <strong>Facts</strong>
+                          </span>
+
+                      </nav>
+                  </div>
+                  <div class="container py-3 mb-12"> 
+                      <nav aria-label="breadcrumb" class="bg-light rounded-3 p-3 mb-12">
+                          <div class="row row-cols-1 row-cols-md-4 g-4">
+                            
+                            {% for profile in profile_color %}
+                                  <div class="col-md-4 col-xl-3" >
+                                      <div class="card bg-c-yellow order-card" style="background:{{ profile.1 }}">
+                                      
+                                      
+                                          <div class="card-block">
+                                    
+                                              <h6 class="m-b-20">{{profile.0.name}}</h6>
+                                              <h2 class="text-right">   <span>{{profile.0.problems}}+</span></h2>
+                  
+                                              <p class="m-b-20">
+                                                <storng> Profile </strong>
+                                                <span class="f-right">
+                                                  <a href="{{profile.0.link}}"><span class="badge bg-info text-dark">Link</span></a>
+                                                </span>
+                                              </p>
+                                          </div> 
+                                      </div>
+                                  </div>
+                            {%endfor%}
+                            
+
+                          </div>
+ 
+                      </nav>
+                  </div>
+              </section>
+                  
+
+{% comment %} Contact us  {% endcomment %}
+
+              <section  id="contact"style="background-color: #eee;">
+                  <div class="container pt-5 ">
+                    
+                      <nav aria-label="breadcrumb" class="bg-light rounded-3 p-3 mb-4">
+                          <span class="px-2">
+                              <strong>Contact Us</strong>
+                          </span>
+                        </nav>
+                  </div>
+                  <div class="container pb-5 mb-12">
+                    
+                      <nav aria-label="breadcrumb" class="bg-light rounded-3 p-3 mb-12">
+
+                                <div class="row">
+                                    <div class="col-md-12 mb-md-0 mb-12">
+                                        <form id="contact_form" name="contact_form" action="contact_form/" method="POST">
+                                          {%csrf_token%}
+                                            <div class="row">
+
+                                                <div class="col-md-6">
+                                                    <div class="md-form mb-0">
+                                                        <input type="text" id="name" name="name" class="form-control" placeholder="Your Name">
+                                                        <label for="name" class=""></label>
+                                                    </div>
+                                                </div>
+                              
+                                                <div class="col-md-6">
+                                                    <div class="md-form mb-0">
+                                                        <input type="text" id="email" name="email" class="form-control" placeholder="Your Email Id">
+                                                        <label for="email" class=""></label>
+                                                    </div>
+                                                </div>
+                                                
+
+                                            </div>
+
+                                            <div class="row">
+                                                <div class="col-md-12">
+                                                    <div class="md-form mb-0">
+                                                        <input type="text" id="subject" name="subject" class="form-control" placeholder="Subject">
+                                                        <label for="subject" class=""></label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+
+                                              
+                                                <div class="col-md-12">
+
+                                                    <div class="md-form">
+                                                        <textarea type="text" id="message" name="message" rows="4" class="form-control md-textarea" placeholder="Your Message"></textarea>
+                                                        <label for="message"></label>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+
+                                        </form>
+
+                                        <div >
+                                            <a class="btn btn-primary" onclick="document.getElementById('contact_form').submit();">Send</a>
+                                        </div>
+                                        <div class="status"></div>
+                                    </div>
+
+
+                                </div>
+
+                      </nav>
+                  </div>
+
+                
+
+              </section>
+
+{% comment %} footer  {% endcomment %}
+            <section style="background-color: #eee;" class="w-100 h-100">
+                 <div class="container py-3">
+                            <footer class="bg-dark text-center text-white">
+                            <!-- Grid container -->
+                            <div class="container p-4 pb-0">
+                                <!-- Section: Social media -->
+                                <section class="mb-4">
+                                <!-- Facebook -->
+                                <a class="btn btn-outline-light btn-floating m-1" href="{{profile.0.facebook}}" role="button"
+                                    ><i class="fab fa-facebook-f"></i
+                                ></a>
+
+                                <!-- Twitter -->
+                                <a class="btn btn-outline-light btn-floating m-1" href="{{profile.0.twitter}}" role="button"
+                                    ><i class="fab fa-twitter"></i
+                                ></a>
+
+                                <!-- Google -->
+                                <a class="btn btn-outline-light btn-floating m-1" href="{{profile.0.email}}" role="button"
+                                    ><i class="fab fa-google"></i
+                                ></a>
+
+                                <!-- Instagram -->
+                                <a class="btn btn-outline-light btn-floating m-1" href="{{profile.0.instagram}}" role="button"
+                                    ><i class="fab fa-instagram"></i
+                                ></a>
+
+                                <!-- Linkedin -->
+                                <a class="btn btn-outline-light btn-floating m-1" href="{{profile.0.linkedin}}" role="button"
+                                    ><i class="fab fa-linkedin-in"></i
+                                ></a>
+
+                                <!-- Github -->
+                                <a class="btn btn-outline-light btn-floating m-1" href="{{profile.0.github}}" role="button"
+                                    ><i class="fab fa-github"></i
+                                ></a>
+                                </section>
+                                <!-- Section: Social media -->
+                            </div>
+                            <!-- Grid container -->
+
+                            <!-- Copyright -->
+                            <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+                                © 2023 Copyright:
+                                <a class="text-white" href="">Kishan Kumar</a>
+                            </div>
+                            <!-- Copyright -->
+                            </footer>
+                            
+                </div>
+              </section>
+  
+              <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+  </body>
+</html>

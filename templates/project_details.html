@@ -1,0 +1,128 @@
+
+
+{% extends "base.html" %}
+
+{% comment %} {% block title %}About Us - My Site{% endblock %} {% endcomment %}
+{% block facebook %}"{{profile.0.facebook}}"{% endblock %} 
+{% block twitter %}"{{profile.0.twitter}}"{% endblock %}
+{% block google %}"{{profile.0.email}}"{% endblock %}
+{% block instagram %}"{{profile.0.instagram}}"{% endblock %} 
+{% block linkedin %}"{{profile.0.linkedin}}"{% endblock %}
+{% block github %}"{{profile.0.github}}"{% endblock %}
+{% block content %}
+
+
+{% comment %} About  {% endcomment %}
+
+            <section style="background-color: #eee;">
+                  <div class="container py-3">
+                      <div class="card mb-1" >
+                        <div class="row g-0">
+                          <div class="col-md-4">
+                            {% comment %} <img
+                              src="https://mdbcdn.b-cdn.net/wp-content/uploads/2020/06/vertical.webp"
+                              alt="Trendy Pants and Shoes"
+                              class="img-fluid rounded-start"
+                            /> {% endcomment %}
+                            <div class="card-body">
+                              <h5 class="card-title">{{project.name}}</h5>
+                              <i>{{project.bio}}</i>
+                              <br>
+			      <a href="{{project.link}}" target="blank"><span class="badge bg-primary">Link</span> </a>
+			      
+                            </div>
+                            
+                          </div>
+                          
+                          <div class="col-md-8">
+                            <div class="card-body">
+                              <h5 class="card-title">Description</h5>
+                              {% comment %} <p class="card-text">
+                                This is a wider card with supporting text below as a natural lead-in to
+                                additional content. This content is a little bit longer.
+                              </p> {% endcomment %}
+
+                              <ul>
+                                  {% for point in desc%}
+                                      <li>{{point}}.</li>
+                                      <hr>
+                                  {%endfor%}
+                              </ul>
+                              {% comment %} <p class="card-text">
+                                <small class="text-muted">Last updated 3 mins ago</small>
+                              </p> {% endcomment %}
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                  </div>
+                  
+            </section>
+
+      
+
+
+
+
+
+
+
+
+{% comment %} Team  {% endcomment %}
+
+              <section style="background-color: #eee;">
+                  
+
+                  <div class="container py-0 mb-12">
+                    
+                      <nav aria-label="breadcrumb" class="bg-info rounded-3 p-3 mb-12">
+                        
+                            <div class="container py-5">
+                                <div class="row text-center text-white">
+                                    <div class="col-lg-8 mx-auto">
+                                        <h1 class="display-4">Team</h1>
+                                        {% comment %} <p class="lead mb-0">Using Bootstrap 4 grid and utilities, create a nice team page.</p> {% endcomment %}
+                                        {% comment %} <p class="lead">Snippet by<a href="https://bootstrapious.com/snippets" class="text-white">
+                                            <u>Bootstrapious</u></a>
+                                        </p> {% endcomment %}
+                                    </div>
+                                </div>
+                            </div><!-- End -->
+
+
+                            <div class="container" >
+                                <div class="row text-center",style="display:flex;flex-direction: row; justify-content: space-between;align-items: center;flex-wrap: wrap;">
+
+                                    <!-- Team item -->
+
+                                  {%for member in team%}
+                                    <div class="col-xl-3 col-sm-6 mb-5" >
+                                        <div class="bg-white rounded shadow-sm py-5 px-4"><img src="/media/{{member.image}}"  width="100" class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm">
+                                            <h5 class="mb-0">{{member.name}}</h5><span class="small text-uppercase text-muted">{{member.bio}}</span>
+                                            <ul class="social mb-0 list-inline mt-3">
+                                                <li class="list-inline-item"><a href="#" class="social-link"><i class="fa fa-facebook-f"></i></a></li>
+                                                <li class="list-inline-item"><a href="{{member.twitter}}" class="social-link"><i class="fa fa-twitter"></i></a></li>
+                                                <li class="list-inline-item"><a href="{{member.instagram}}" class="social-link"><i class="fa fa-instagram"></i></a></li>
+                                                <li class="list-inline-item"><a href="{{member.linkedin}}" class="social-link"><i class="fa fa-linkedin"></i></a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    {%endfor%}
+
+                                    <!-- Team item -->
+
+
+                                 
+
+                          
+                                </div>
+                            </div>
+
+
+
+                      </nav>
+                  </div>
+                  
+              </section>
+{% endblock %}
